@@ -4,8 +4,7 @@
   "description": "API for Vallox ventilation units",
   "main": "index.js",
   "scripts": {
-    "lint": "standard --verbose | snazzy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard --verbose | snazzy"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,8 @@
 # vallox-api
 
+[![Build Status](https://travis-ci.org/danielbayerlein/vallox-api.svg?branch=master)](https://travis-ci.org/danielbayerlein/vallox-api)
 [![Greenkeeper badge](https://badges.greenkeeper.io/danielbayerlein/vallox-api.svg)](https://greenkeeper.io/)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 API for [Vallox](https://www.vallox.com) ventilation units
 
