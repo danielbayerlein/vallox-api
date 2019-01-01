@@ -1,5 +1,7 @@
 # vallox-api
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/danielbayerlein/vallox-api.svg)](https://greenkeeper.io/)
+
 API for [Vallox](https://www.vallox.com) ventilation units
 
 ## Supported units
