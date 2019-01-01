@@ -1,0 +1,35 @@
+{
+  "name": "@danielbayerlein/vallox-api",
+  "version": "0.1.0",
+  "description": "API for Vallox ventilation units",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielbayerlein/vallox-api.git"
+  },
+  "keywords": [
+    "Vallox",
+    "Ventilation",
+    "IoT"
+  ],
+  "author": "Daniel Bayerlein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielbayerlein/vallox-api/issues"
+  },
+  "homepage": "https://github.com/danielbayerlein/vallox-api#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "ws": "^6.1.2"
+  },
+  "devDependencies": {
+    "snazzy": "^8.0.0",
+    "standard": "^12.0.1"
+  }
+}
