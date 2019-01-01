@@ -2,6 +2,12 @@
 
 API for [Vallox](https://www.vallox.com) ventilation units
 
+## Supported units
+
+* ValloPlus 350 MV
+* _Please add your tested unit_
+
+
 ## Credits
 
 * [yozik04/vallox_websocket_api](https://github.com/yozik04/vallox_websocket_api)
