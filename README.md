@@ -1,5 +1,7 @@
 # vallox-api
 
+[![Build Status](https://travis-ci.org/danielbayerlein/vallox-api.svg?branch=master)](https://travis-ci.org/danielbayerlein/vallox-api)
+
 API for [Vallox](https://www.vallox.com) ventilation units
 
 ## Supported units
