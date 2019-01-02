@@ -20,6 +20,16 @@ Returns the client instance.
 new Vallox({ ip: '192.168.178.33', port: 80 })
 ```
 
+### `.PROFILES`
+
+Returns an object with the profile mapping.
+
+```javascript
+client.PROFILES
+```
+
+[Example](./examples/getProfile.js)
+
 ### `.getProfile()`
 
 Returns the current profile id.
