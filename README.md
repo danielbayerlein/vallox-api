@@ -70,7 +70,7 @@ await client.setProfile(client.PROFILES.FIREPLACE, 30)
 
 [Example](./examples/setProfile.js)
 
-### `.setValues(object{string, int})`
+### `.setValues(object{string: int})`
 
 Sets the value for the metric key.
 
