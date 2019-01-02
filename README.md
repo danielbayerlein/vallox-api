@@ -8,17 +8,27 @@ API for [Vallox](https://www.vallox.com) ventilation units
 
 ## Installation
 
-Not yet available.
+```bash
+# npm
+npm install @danielbayerlein/vallox-api --save
+
+# Yarn
+yarn add @danielbayerlein/vallox-api
+```
 
 ## Usage
 
-### Initalize
+### `new Vallox(object{ip: string, port: int})`
 
 Returns the client instance.
 
 ```javascript
-new Vallox({ ip: '192.168.178.33', port: 80 })
+import Vallox from '@danielbayerlein/vallox-api'
+
+const client = new Vallox({ ip: '192.168.178.33', port: 80 })
 ```
+
+[Example](./examples/getProfile.js)
 
 ### `.PROFILES`
 
