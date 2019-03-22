@@ -2,6 +2,8 @@ const WebSocket = require('ws')
 const { VlxDevConstants } = require('./lib/constants')
 const { VlxDataBuffer, VlxWriteItem, calculateOffset } = require('./lib/vallox')
 
+const MAX_RETRIES = 3
+
 module.exports = class Vallox {
   constructor (config) {
     this._config = config
@@ -17,21 +19,42 @@ module.exports = class Vallox {
     }
   }
 
-  async _request (data) {
+  async _request(data, retries = 0) {
+    if (retries > MAX_RETRIES) {
+      throw "To many retries, so Kill request"
+    }
     const { ip, port } = this._config
 
     const ws = new WebSocket(`ws://${ip}:${port}/`)
     ws.binaryType = 'arraybuffer'
-
+    let preventError = false
     return new Promise((resolve, reject) => {
-      ws.onopen = () => ws.send(data)
 
       ws.onmessage = event => {
-        ws.close()
         resolve(event.data)
+        ws.close()
       }
 
-      ws.onerror = error => reject(error)
+      ws.on("error", error => {
+        setTimeout(() => {
+          if (!preventError) {
+            reject(error)
+          }
+        }, 0);
+      })
+
+      ws.on("close", (code, reason) => {
+        if (code === 1006) {
+          preventError = true
+          ws.removeAllListeners()
+          ws.terminate()
+          this._request(data, ++retries).then((res) => {
+            resolve( res )
+          } )
+        }
+      } )
+
+      ws.onopen = () => ws.send(data)
     })
   }
 
