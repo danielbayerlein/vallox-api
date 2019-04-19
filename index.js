@@ -56,7 +56,7 @@ module.exports = class Vallox {
     if (result['A_CYC_BOOST_TIMER'] > 0) return this.PROFILES.BOOST
     if (result['A_CYC_FIREPLACE_TIMER'] > 0) return this.PROFILES.FIREPLACE
     if (result['A_CYC_EXTRA_TIMER'] > 0) return this.PROFILES.EXTRA
-    if (result['A_CYC_resultTATE'] === 1) return this.PROFILES.AWAY
+    if (result['A_CYC_STATE'] === 1) return this.PROFILES.AWAY
     if (result['A_CYC_STATE'] === 0) return this.PROFILES.HOME
 
     return this.PROFILES.NONE
