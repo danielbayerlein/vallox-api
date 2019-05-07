@@ -45,6 +45,12 @@ module.exports = class Vallox {
     return Math.round(kelvin)
   }
 
+  _convert (key, value, cb) {
+    return key.indexOf('_TEMP_') === -1 || key.indexOf('_MODE') > 0
+      ? value
+      : cb()
+  }
+
   async getProfile () {
     const result = await this.fetchMetrics([
       'A_CYC_STATE',
@@ -146,7 +152,7 @@ module.exports = class Vallox {
 
     keys.forEach(key => {
       const value = vlxReceiveBuffer[calculateOffset(VlxDevConstants[key])]
-      result[key] = this.convert(key, value, () => this._toCelsius(value))
+      result[key] = this._convert(key, value, () => this._toCelsius(value))
     })
 
     return result
@@ -160,16 +166,12 @@ module.exports = class Vallox {
       const item = new VlxWriteItem()
 
       item.address = VlxDevConstants[key]
-      item.value = this.convert(key, value, () => this._toKelvin(value))
+      item.value = this._convert(key, value, () => this._toKelvin(value))
       buf.appendData(item)
     })
 
     await this._request(buf.convertDataToBuffer(VlxDevConstants.WS_WEB_UI_COMMAND_WRITE_DATA))
 
     return true
-  }
-
-  convert (key, value, converter) {
-    return (key.indexOf('_TEMP_') === -1 || key.indexOf('_MODE') > 0) ? value : converter()
   }
 }
