@@ -74,43 +74,43 @@ module.exports = class Vallox {
     switch (profile) {
       case this.PROFILES.HOME:
         this.setValues({
-          'A_CYC_STATE': 0,
-          'A_CYC_BOOST_TIMER': 0,
-          'A_CYC_FIREPLACE_TIMER': 0,
-          'A_CYC_EXTRA_TIMER': 0
+          A_CYC_STATE: 0,
+          A_CYC_BOOST_TIMER: 0,
+          A_CYC_FIREPLACE_TIMER: 0,
+          A_CYC_EXTRA_TIMER: 0
         })
         break
 
       case this.PROFILES.AWAY:
         this.setValues({
-          'A_CYC_STATE': 1,
-          'A_CYC_BOOST_TIMER': 0,
-          'A_CYC_FIREPLACE_TIMER': 0,
-          'A_CYC_EXTRA_TIMER': 0
+          A_CYC_STATE: 1,
+          A_CYC_BOOST_TIMER: 0,
+          A_CYC_FIREPLACE_TIMER: 0,
+          A_CYC_EXTRA_TIMER: 0
         })
         break
 
       case this.PROFILES.FIREPLACE:
         this.setValues({
-          'A_CYC_BOOST_TIMER': 0,
-          'A_CYC_FIREPLACE_TIMER': duration || metrics.A_CYC_FIREPLACE_TIME,
-          'A_CYC_EXTRA_TIMER': 0
+          A_CYC_BOOST_TIMER: 0,
+          A_CYC_FIREPLACE_TIMER: duration || metrics.A_CYC_FIREPLACE_TIME,
+          A_CYC_EXTRA_TIMER: 0
         })
         break
 
       case this.PROFILES.BOOST:
         this.setValues({
-          'A_CYC_BOOST_TIMER': duration || metrics.A_CYC_BOOST_TIME,
-          'A_CYC_FIREPLACE_TIMER': 0,
-          'A_CYC_EXTRA_TIMER': 0
+          A_CYC_BOOST_TIMER: duration || metrics.A_CYC_BOOST_TIME,
+          A_CYC_FIREPLACE_TIMER: 0,
+          A_CYC_EXTRA_TIMER: 0
         })
         break
 
       case this.PROFILES.EXTRA:
         this.setValues({
-          'A_CYC_BOOST_TIMER': 0,
-          'A_CYC_FIREPLACE_TIMER': 0,
-          'A_CYC_EXTRA_TIMER': duration || metrics.A_CYC_EXTRA_TIME
+          A_CYC_BOOST_TIMER: 0,
+          A_CYC_FIREPLACE_TIMER: 0,
+          A_CYC_EXTRA_TIMER: duration || metrics.A_CYC_EXTRA_TIME
         })
         break
 
