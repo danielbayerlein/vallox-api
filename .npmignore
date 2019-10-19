@@ -1,4 +1,4 @@
 .DS_Store
-.travis.yml
+.github/
 examples/
 yarn-error.log
