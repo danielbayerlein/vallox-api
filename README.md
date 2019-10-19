@@ -2,8 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/%40danielbayerlein%2Fvallox-api.svg)](https://badge.fury.io/js/%40danielbayerlein%2Fvallox-api)
 [![Build Status](https://travis-ci.org/danielbayerlein/vallox-api.svg?branch=master)](https://travis-ci.org/danielbayerlein/vallox-api)
+[![Actions Status](https://github.com/danielbayerlein/vallox-api/workflows/CI/badge.svg)](https://github.com/danielbayerlein/vallox-api/actions)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Greenkeeper badge](https://badges.greenkeeper.io/danielbayerlein/vallox-api.svg)](https://greenkeeper.io/)
 
 API for [Vallox](https://www.vallox.com) ventilation units
 
