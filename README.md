@@ -1,7 +1,6 @@
 # vallox-api
 
 [![npm version](https://badge.fury.io/js/%40danielbayerlein%2Fvallox-api.svg)](https://badge.fury.io/js/%40danielbayerlein%2Fvallox-api)
-[![Build Status](https://travis-ci.org/danielbayerlein/vallox-api.svg?branch=master)](https://travis-ci.org/danielbayerlein/vallox-api)
 [![Actions Status](https://github.com/danielbayerlein/vallox-api/workflows/CI/badge.svg)](https://github.com/danielbayerlein/vallox-api/actions)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=danielbayerlein/vallox-api)](https://dependabot.com)
