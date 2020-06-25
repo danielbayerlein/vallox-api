@@ -36,8 +36,8 @@ module.exports = class Vallox {
   }
 
   _toCelsius (aKelvins) {
-    const celsius = (aKelvins / 100) - this._kelvinToZero
-    return Math.round(celsius)
+    const celsius = (aKelvins / 100.0) - this._kelvinToZero
+    return celsius.toFixed(2)
   }
 
   _toKelvin (aCelcius) {
