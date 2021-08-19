@@ -25,7 +25,7 @@
     "access": "public"
   },
   "dependencies": {
-    "ws": "^7.3.1"
+    "ws": "^8.2.0"
   },
   "devDependencies": {
     "snazzy": "^9.0.0",
