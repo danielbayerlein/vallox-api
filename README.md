@@ -106,6 +106,7 @@ await client.setValues({
 ## Supported units
 
 * ValloPlus 350 MV
+* ValloPlus 240-E MV
 * _Please add your tested unit_
 
 ## Credits
