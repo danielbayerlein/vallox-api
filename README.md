@@ -7,6 +7,12 @@
 
 API for [Vallox](https://www.vallox.com) ventilation units
 
+## Changelog
+
+### 1.1.0
+
+- Added support for firmware `3.1.4` automatic mode via `client.PROFILES.AUTO`
+
 ## Installation
 
 ```bash
@@ -34,6 +40,16 @@ const client = new Vallox({ ip: '192.168.178.33', port: 80 })
 ### `.PROFILES`
 
 Returns an object with the profile mapping.
+
+Available profile ids:
+
+- `NONE`
+- `HOME`
+- `AWAY`
+- `BOOST`
+- `FIREPLACE`
+- `EXTRA`
+- `AUTO`
 
 ```javascript
 client.PROFILES
@@ -79,6 +95,9 @@ await client.fetchMetrics([
 Sets the profile.
 
 ```javascript
+// Adaptive / automatic mode
+await client.setProfile(client.PROFILES.AUTO)
+
 // Permanently AWAY profile
 await client.setProfile(client.PROFILES.AWAY)
 

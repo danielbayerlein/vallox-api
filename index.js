@@ -13,7 +13,8 @@ module.exports = class Vallox {
       AWAY: 2,
       BOOST: 3,
       FIREPLACE: 4,
-      EXTRA: 5
+      EXTRA: 5,
+      AUTO: 6
     }
   }
 
@@ -62,6 +63,7 @@ module.exports = class Vallox {
     if (result.A_CYC_BOOST_TIMER > 0) return this.PROFILES.BOOST
     if (result.A_CYC_FIREPLACE_TIMER > 0) return this.PROFILES.FIREPLACE
     if (result.A_CYC_EXTRA_TIMER > 0) return this.PROFILES.EXTRA
+    if (result.A_CYC_STATE === 2) return this.PROFILES.AUTO
     if (result.A_CYC_STATE === 1) return this.PROFILES.AWAY
     if (result.A_CYC_STATE === 0) return this.PROFILES.HOME
 
@@ -84,6 +86,15 @@ module.exports = class Vallox {
       case this.PROFILES.AWAY:
         this.setValues({
           A_CYC_STATE: 1,
+          A_CYC_BOOST_TIMER: 0,
+          A_CYC_FIREPLACE_TIMER: 0,
+          A_CYC_EXTRA_TIMER: 0
+        })
+        break
+
+      case this.PROFILES.AUTO:
+        this.setValues({
+          A_CYC_STATE: 2,
           A_CYC_BOOST_TIMER: 0,
           A_CYC_FIREPLACE_TIMER: 0,
           A_CYC_EXTRA_TIMER: 0
