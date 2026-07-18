@@ -1,6 +1,6 @@
 {
   "name": "@danielbayerlein/vallox-api",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "API for Vallox ventilation units",
   "main": "index.js",
   "scripts": {
