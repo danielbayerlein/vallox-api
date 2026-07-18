@@ -7,12 +7,6 @@
 
 API for [Vallox](https://www.vallox.com) ventilation units
 
-## Changelog
-
-### 1.1.0
-
-- Added support for firmware `3.1.4` automatic mode via `client.PROFILES.AUTO`
-
 ## Installation
 
 ```bash
